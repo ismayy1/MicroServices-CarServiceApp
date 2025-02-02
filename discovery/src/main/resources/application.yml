@@ -1,0 +1,12 @@
+server:
+  port: 8097 # Port of this application
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false # It will not register itself to a Eureka server, it is one.
+    fetchRegistry: false # It will not fetch registries from another Eureka server.
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
